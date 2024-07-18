@@ -20,6 +20,7 @@ import AddUser from '../pages/admin/user/AddUser'
 import EditUser from '../pages/admin/user/EditUser'
 import Login from '../pages/front/Login'
 import Register from '../pages/front/Register'
+import NotFound from '../pages/front/NotFound'
 
 const Router = () => {
     return (
@@ -82,7 +83,7 @@ const Router = () => {
                     <Route path='add' element={<AddCategory />} />
 
                     {/* category edit page */}
-                    <Route path='edit' element={<EditCategory />} />
+                    <Route path='edit/:id' element={<EditCategory />} />
                 </Route>
 
                 {/* user pages*/}
@@ -97,6 +98,8 @@ const Router = () => {
                     <Route path='edit' element={<EditUser />} />
                 </Route>
             </Route>
+
+            <Route path='*' element={<NotFound />} />
         </Routes>
     )
 }

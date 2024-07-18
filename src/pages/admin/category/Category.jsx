@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getCategoryStart } from '../../../redux/action/category.action';
+import { deleteCategoryStart, getCategoryStart } from '../../../redux/action/category.action';
 
 const Category = () => {
   let categories = useSelector(state => state.category.categories)
   const dispatch = useDispatch();
 
+  const deleteCategory = (id) => {
+    dispatch(deleteCategoryStart(id))
+  }
+
   useEffect(() => {
     dispatch(getCategoryStart())
-  }, [categories.length])
+  }, [categories.length,dispatch])
 
   return (
     <div className="card">
@@ -34,12 +38,12 @@ const Category = () => {
                 categories.length > 0 && categories.map((category, index) => (
                   <tr key={index}>
                     <th>{index + 1}</th>
-                    <td><img height={"50px"} src="https://img.freepik.com/free-photo/elegant-young-handsome-man-studio-fashion-portrait_1301-4975.jpg?t=st=1720593088~exp=1720596688~hmac=fc8508883a86c2431a3d07f2d3b90b11f5134ba861fde28193e77a3969c6fc58&w=360" alt="" /></td>
+                    <td><img height={"50px"} src={category.image} alt={category.name} /></td>
                     <td>{category.name}</td>
                     <td>{category.status === "1" ? "Active" : "Inactive"}</td>
                     <td>
-                      <Link to="/admin/category/edit" className='btn btn-warning me-2'>Edit</Link>
-                      <button className='btn btn-danger'>Delete</button>
+                      <Link to={`/admin/category/edit/${category.id}`} className='btn btn-warning me-2'>Edit</Link>
+                      <button className='btn btn-danger' onClick={() => deleteCategory(category.id)}>Delete</button>
                     </td>
                   </tr>
                 ))

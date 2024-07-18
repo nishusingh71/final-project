@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -43,11 +44,11 @@ const Home = () => {
                 <div className="carousel-inner" role="listbox">
                   <div className="carousel-item active rounded">
                     <img src="img/hero-img-1.png" className="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide" />
-                      <a href="#" className="btn px-4 py-2 text-white rounded">Fruites</a>
+                      <Link to="#" className="btn px-4 py-2 text-white rounded">Fruites</Link>
                   </div>
                   <div className="carousel-item rounded">
                     <img src="img/hero-img-2.jpg" className="img-fluid w-100 h-100 rounded" alt="Second slide" />
-                      <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a>
+                      <Link to="#" className="btn px-4 py-2 text-white rounded">Vesitables</Link>
                   </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -129,39 +130,39 @@ const Home = () => {
               <div className="col-lg-8 text-end">
                 <ul className="nav nav-pills d-inline-flex text-center mb-5">
                   <li className="nav-item">
-                    <a className="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                    <Link className="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" to="#tab-1">
                       <span className="text-dark" style={{
                         width: "130px"
                       }}>All Products</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                    <Link className="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" to="#tab-2">
                       <span className="text-dark" style={{
                         width: "130px"
                       }}>Vegetables</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                    <Link className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" to="#tab-3">
                       <span className="text-dark" style={{
                         width: "130px"
                       }}>Fruits</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                    <Link className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" to="#tab-4">
                       <span className="text-dark" style={{
                         width: "130px"
                       }}>Bread</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                    <Link className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" to="#tab-5">
                       <span className="text-dark" style={{
                         width: "130px"
                       }}>Meat</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -184,7 +185,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -202,7 +203,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -220,7 +221,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -238,7 +239,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -256,7 +257,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -274,7 +275,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -292,7 +293,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -310,7 +311,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -336,7 +337,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -354,7 +355,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -380,7 +381,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -398,7 +399,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -424,7 +425,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -442,7 +443,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -468,7 +469,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -486,7 +487,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -504,7 +505,7 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div className="d-flex justify-content-between flex-lg-wrap">
                               <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                              <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                              <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                             </div>
                           </div>
                         </div>
@@ -524,7 +525,7 @@ const Home = () => {
         <div className="container py-5">
           <div className="row g-4 justify-content-center">
             <div className="col-md-6 col-lg-4">
-              <a href="#">
+              <Link to="#">
                 <div className="service-item bg-secondary rounded border border-secondary">
                   <img src="img/featur-1.jpg" className="img-fluid rounded-top w-100" alt="" />
                     <div className="px-4 rounded-bottom">
@@ -534,10 +535,10 @@ const Home = () => {
                       </div>
                     </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-4">
-              <a href="#">
+              <Link to="#">
                 <div className="service-item bg-dark rounded border border-dark">
                   <img src="img/featur-2.jpg" className="img-fluid rounded-top w-100" alt="" />
                     <div className="px-4 rounded-bottom">
@@ -547,10 +548,10 @@ const Home = () => {
                       </div>
                     </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-4">
-              <a href="#">
+              <Link to="#">
                 <div className="service-item bg-primary rounded border border-primary">
                   <img src="img/featur-3.jpg" className="img-fluid rounded-top w-100" alt="" />
                     <div className="px-4 rounded-bottom">
@@ -560,7 +561,7 @@ const Home = () => {
                       </div>
                     </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -585,7 +586,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -602,7 +603,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -619,7 +620,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -636,7 +637,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -653,7 +654,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -670,7 +671,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -687,7 +688,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -704,7 +705,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                 <div className="d-flex justify-content-between flex-lg-wrap">
                   <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                  <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                  <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                 </div>
               </div>
             </div>
@@ -722,7 +723,7 @@ const Home = () => {
                 <h1 className="display-3 text-white">Fresh Exotic Fruits</h1>
                 <p className="fw-normal display-3 text-dark mb-4">in Our Store</p>
                 <p className="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                <a href="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+                <Link to="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</Link>
               </div>
             </div>
             <div className="col-lg-6">
@@ -761,7 +762,7 @@ const Home = () => {
                     <img src="img/best-product-1.jpg" className="img-fluid rounded-circle w-100" alt="" />
                   </div>
                   <div className="col-6">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -770,7 +771,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
                 </div>
               </div>
@@ -782,7 +783,7 @@ const Home = () => {
                     <img src="img/best-product-2.jpg" className="img-fluid rounded-circle w-100" alt="" />
                   </div>
                   <div className="col-6">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -791,7 +792,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
                 </div>
               </div>
@@ -803,7 +804,7 @@ const Home = () => {
                     <img src="img/best-product-3.jpg" className="img-fluid rounded-circle w-100" alt="" />
                   </div>
                   <div className="col-6">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -812,7 +813,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
                 </div>
               </div>
@@ -824,7 +825,7 @@ const Home = () => {
                     <img src="img/best-product-4.jpg" className="img-fluid rounded-circle w-100" alt="" />
                   </div>
                   <div className="col-6">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -833,7 +834,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
                 </div>
               </div>
@@ -845,7 +846,7 @@ const Home = () => {
                     <img src="img/best-product-5.jpg" className="img-fluid rounded-circle w-100" alt="" />
                   </div>
                   <div className="col-6">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -854,7 +855,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
                 </div>
               </div>
@@ -866,7 +867,7 @@ const Home = () => {
                     <img src="img/best-product-6.jpg" className="img-fluid rounded-circle w-100" alt="" />
                   </div>
                   <div className="col-6">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -875,7 +876,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
                 </div>
               </div>
@@ -884,7 +885,7 @@ const Home = () => {
               <div className="text-center">
                 <img src="img/fruite-item-1.jpg" className="img-fluid rounded" alt="" />
                   <div className="py-4">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3 justify-content-center">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -893,7 +894,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
               </div>
             </div>
@@ -901,7 +902,7 @@ const Home = () => {
               <div className="text-center">
                 <img src="img/fruite-item-2.jpg" className="img-fluid rounded" alt="" />
                   <div className="py-4">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3 justify-content-center">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -910,7 +911,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
               </div>
             </div>
@@ -918,7 +919,7 @@ const Home = () => {
               <div className="text-center">
                 <img src="img/fruite-item-3.jpg" className="img-fluid rounded" alt="" />
                   <div className="py-4">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3 justify-content-center">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -927,7 +928,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
               </div>
             </div>
@@ -935,7 +936,7 @@ const Home = () => {
               <div className="text-center">
                 <img src="img/fruite-item-4.jpg" className="img-fluid rounded" alt="" />
                   <div className="py-2">
-                    <a href="#" className="h5">Organic Tomato</a>
+                    <Link to="#" className="h5">Organic Tomato</Link>
                     <div className="d-flex my-3 justify-content-center">
                       <i className="fas fa-star text-primary"></i>
                       <i className="fas fa-star text-primary"></i>
@@ -944,7 +945,7 @@ const Home = () => {
                       <i className="fas fa-star"></i>
                     </div>
                     <h4 className="mb-3">3.12 $</h4>
-                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <Link to="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</Link>
                   </div>
               </div>
             </div>
