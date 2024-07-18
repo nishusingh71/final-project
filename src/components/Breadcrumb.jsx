@@ -36,11 +36,16 @@ const Breadcrumb = () => {
                         </li>
                     }
 
+                   
                     if (segment.length - 1 === i) {
 
                         return <li className="breadcrumb-item text-capitalize" key={i}>
                             <Link to="#">{s}</Link>
                         </li>
+                    }
+
+                    if(s === "edit" ) {
+                        return undefined
                     }
 
                     return <li className="breadcrumb-item text-capitalize" key={i}>
