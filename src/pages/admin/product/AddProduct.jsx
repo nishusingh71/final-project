@@ -1,24 +1,60 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { initialState } from './productValidation'
 import { useFormData } from '../../../hooks/useFormData'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TextInput from '../../../components/ui/TextInput';
 import Textarea from '../../../components/ui/Textarea';
 import Number from '../../../components/ui/Number';
 import SelectBox from '../../../components/ui/SelectBox';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import FileInput from './../../../components/ui/FileInput';
+import { modifyFormData } from '../../../helpers/formHelper';
+import { addProductStart } from '../../../redux/action/product.action';
 
 const AddProduct = () => {
   let categories = useSelector(state => state.category.categories);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  console.log(categories);
-
-  let [formData, uploadFileStatus, , inputChange, uploadFiles] = useFormData(initialState, "product");
+  let [formStatus, setFormStatus] = useState(true);
+  let [formData, uploadFileStatus,setFormData , inputChange, uploadFiles] = useFormData(initialState, "product");
 
   const submit = (event) => {
     event.preventDefault();
+    let result = modifyFormData(formData);
+    
+    if(result.isFormValid) {
+      dispatch(addProductStart(result.modifyObject))
 
+      setFormStatus(true)
+
+      setTimeout(() => {
+        navigate("/admin/product")
+      }, 1000)
+    }else {
+      setFormStatus(false)
+
+      for (const formControl of formData) {
+        formControl.touched = true;
+      }
+
+      setFormData((prevValues) => ([...prevValues]))
+    }
   }
+
+  const setDefaultValue = useCallback(() => {
+    for (const formControl of initialState) {
+       formControl.value = "";
+       formControl.touched = false
+   }
+
+   setFormData((prevValue) => ([...prevValue]))
+  }, [setFormData])
+
+  useEffect(() => {
+    setDefaultValue()
+  }, [setDefaultValue])
+
   return (
     <div className="card">
       <div className="card-header d-flex justify-content-between ">
@@ -26,10 +62,15 @@ const AddProduct = () => {
         <Link to="/admin/product" className='btn btn-primary btn-sm text-white'>Back</Link>
       </div>
       <div className="card-body">
+        {!formStatus  && <h5 className='text-danger text-center'>Please Enter all required Field</h5>}
         <form onSubmit={submit}>
           {initialState.length > 0 && initialState.map((state, index) => {
             if(state.type === "text") {
               return <TextInput formControl={state} inputChange={inputChange} key={index}/>
+            }
+
+            if(state.type === "file") {
+              return <FileInput formControl={state} uploadFiles={uploadFiles}  key={index} />
             }
 
             if(state.type === "textarea") {
@@ -50,7 +91,7 @@ const AddProduct = () => {
               }
 
               if(state.name === "category") {
-                return <SelectBox formControl={state} inputChange={inputChange} values={categories} />
+                return <SelectBox formControl={state} inputChange={inputChange} values={categories} key={index} />
               }
             }
 

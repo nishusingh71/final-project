@@ -1,7 +1,25 @@
-import React from 'react'
+import React, { useCallback, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { deleteProductStart, getProductStart } from '../../../redux/action/product.action'
 
 const Product = () => {
+  let products = useSelector(state => state.product.products)
+  const dispatch = useDispatch();
+
+  const getProduct = useCallback(() => {
+    dispatch(getProductStart())
+  }, [dispatch])
+
+  
+  const deleteProduct = (id) => {
+    dispatch(deleteProductStart(id))
+  }
+
+  useEffect(() => {
+    getProduct()
+  }, [products.length, getProduct])
+
   return (
     <div className="card">
       <div className="card-header d-flex justify-content-between ">
@@ -25,20 +43,24 @@ const Product = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <td>
-                  <Link to={`#`} className='btn btn-warning me-2'>Edit</Link>
-                  <button className='btn btn-danger'>Delete</button>
-                </td>
-              </tr>
+              {
+                products.length > 0 && products.map((product, index) => (
+                  <tr key={index}>
+                    <th>{index + 1}</th>
+                    <th><img src={product.image} alt="" height={50} /></th>
+                    <th>{product.name}</th>
+                    <th>{product.type}</th>
+                    <th>{product.category}</th>
+                    <th>$ {product.price}</th>
+                    <th>{product.quantity}</th>
+                    <td>{product.status === "active" ? "Active" : "Inactive"}</td>
+                    <td>
+                      <Link to={`/admin/product/edit/${product.id}`} className='btn btn-warning me-2'>Edit</Link>
+                      <button onClick={() => deleteProduct(product.id)}  className='btn btn-danger'>Delete</button>
+                    </td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>

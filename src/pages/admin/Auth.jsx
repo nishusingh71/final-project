@@ -1,9 +1,20 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Sidebar from '../../layouts/Sidebar'
 import Breadcrumb from '../../components/Breadcrumb'
+import { useSelector } from 'react-redux'
 
 const Auth = () => {
+  const navigate = useNavigate();
+
+  let currentUser = useSelector((state) => state.user.currentUser);
+
+  useEffect(() => {
+    if(!currentUser.name) {
+      navigate("/login")
+    }
+  })
+
   return (
     <>
       <Breadcrumb />

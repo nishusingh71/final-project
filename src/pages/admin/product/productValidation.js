@@ -98,6 +98,15 @@ export const initialState = [{
         status: ""
     },
     {
+        name: "quantity",
+        type: "number",
+        value: "",
+        required: true,
+        description: "Please enter Quantity",
+        touched: false,
+        status: ""
+    },
+    {
         name: "status",
         type: "select",
         value: "",

@@ -7,22 +7,11 @@ export const useFormData = (initialState, flag) => {
     const [uploadFileStatus, setUploadFileStatus] = useState(false);
     
     const inputChange = (event, object) => {
-        setFomData((prevValue) => ({
-            ...prevValue,
-            [event.target.name]: {
-                ...object,
-                value: event.target.value,
-                touched: true,
-                status: event.target.value !== ""  && object.required ? "valid" : "invalid" 
-            }
-        }))
-
-        if(object.required) {
-            setFomData((prevValue) => ({
-                ...prevValue,
-                formStatus: event.target.value !== ""  && object.required ? "valid" : "invalid" 
-            }))
-        }
+        
+        object.value = event.target.value;
+        object.touched = true
+        
+        setFomData((prevValue) => ([...prevValue]))
     }
 
     const uploadFiles = (event, object) => {
@@ -60,24 +49,10 @@ export const useFormData = (initialState, flag) => {
                 // Handle successful uploads on complete
                 // For instance, get the download URL: https://firebasestorage.googleapis.com/...
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    setFomData((prevData) => ({
-                        ...prevData,
-                        image: {
-                            ...object,
-                            value: downloadURL,
-                            touched: true,
-                            status: downloadURL !== ""  && object.required ? "valid" : "invalid" 
-                        }
-                    }))
+                    object.value = downloadURL;
+                    setFomData((prevValue) => ([...prevValue]))
 
                     setUploadFileStatus(false)
-
-                    if(object.required) {
-                        setFomData((prevValue) => ({
-                            ...prevValue,
-                            formStatus: event.target.files.length !== ""  && object.required ? "valid" : "invalid" 
-                        }))
-                    }
                 });
             }
         );

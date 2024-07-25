@@ -71,7 +71,7 @@ const Router = () => {
                     <Route path='add' element={<AddProduct />} />
 
                     {/* product edit page */}
-                    <Route path='edit' element={<EditProduct />} />
+                    <Route path='edit/:id' element={<EditProduct />} />
                 </Route>
 
                 {/* category pages*/}
@@ -95,7 +95,7 @@ const Router = () => {
                     <Route path='add' element={<AddUser />} />
 
                     {/* user edit page */}
-                    <Route path='edit' element={<EditUser />} />
+                    <Route path='edit/:id' element={<EditUser />} />
                 </Route>
             </Route>
 

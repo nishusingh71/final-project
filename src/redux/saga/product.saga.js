@@ -47,7 +47,7 @@ function* updateProduct({
     payload
 }) {
     try {
-        yield updateProductToAPI(payload.category, payload.id)
+        yield updateProductToAPI(payload.product, payload.id)
         yield put(getProductStart())
     } catch (error) {
         yield put(updateProductError(error.message))

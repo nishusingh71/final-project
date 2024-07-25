@@ -6,7 +6,7 @@ const TextInput = ({ formControl, inputChange }) => {
             <label htmlFor={formControl.name} className='mb-2'>{formControl.name}</label>
             <input
                 type="text"
-                id='name'
+                id={formControl.name}
                 className={formControl.required && formControl.touched && formControl.value === "" ? 'form-control border-danger' : 'form-control'}
                 name={formControl.name}
                 value={formControl.value}

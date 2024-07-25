@@ -40,7 +40,7 @@ const Category = () => {
                     <th>{index + 1}</th>
                     <td><img height={"50px"} src={category.image} alt={category.name} /></td>
                     <td>{category.name}</td>
-                    <td>{category.status === "1" ? "Active" : "Inactive"}</td>
+                    <td>{category.status === "active" ? "Active" : "Inactive"}</td>
                     <td>
                       <Link to={`/admin/category/edit/${category.id}`} className='btn btn-warning me-2'>Edit</Link>
                       <button className='btn btn-danger' onClick={() => deleteCategory(category.id)}>Delete</button>
