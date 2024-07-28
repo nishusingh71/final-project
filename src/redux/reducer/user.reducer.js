@@ -1,7 +1,8 @@
 import {
     GET_USER_SUCCESS,
     LOGIN_USER_SUCCESS,
-    LOGOUT_USER_SUCCESS
+    LOGOUT_USER_SUCCESS,
+    PROFILE_EDIT_SUCCESS
 } from "../constant/user.constant";
 
 const defaultValue = {
@@ -41,6 +42,7 @@ export const userReducer = (state = initialState, action) => {
             };
 
         case LOGIN_USER_SUCCESS:
+        case PROFILE_EDIT_SUCCESS:
             localStorage.setItem("currentUser", JSON.stringify(action.payload))
             return {
                 ...state,

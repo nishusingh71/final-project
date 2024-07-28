@@ -2,9 +2,9 @@ import {
     put,
     takeLatest
 } from "redux-saga/effects";
-import { ADD_USER_START, DELETE_USER_START, GET_USER_START, LOGIN_USER_START, LOGOUT_USER_START, UPDATE_USER_START } from "../constant/user.constant";
+import { ADD_USER_START, DELETE_USER_START, GET_USER_START, LOGIN_USER_START, LOGOUT_USER_START, PROFILE_EDIT_START, UPDATE_USER_START } from "../constant/user.constant";
 import { addUserToAPI, deleteUserToAPI, getUserFromAPI, updateUserToAPI } from "../service/user.service";
-import { addUserError, deleteUserError, getUserError, getUserStart, getUserSuccess, loginUserError, loginUserSuccess, logoutUserError, logoutUserSuccess, updateUserError } from "../action/user.action";
+import { addUserError, deleteUserError, editProfileSuccess, getUserError, getUserStart, getUserSuccess, loginUserError, loginUserSuccess, logoutUserError, logoutUserSuccess, updateUserError } from "../action/user.action";
 
 function* getUser() {
     try {
@@ -66,6 +66,18 @@ function* logoutUser() {
     }
 }
 
+function* editProfile({
+    payload
+}) {
+    try {
+        yield updateUserToAPI(payload.user, payload.id)
+        yield put(getUserStart())
+        yield put(editProfileSuccess(payload.user))
+    } catch (error) {
+        yield put(updateUserError(error.message))
+    }
+}
+
 export default function* user() {
     yield takeLatest(GET_USER_START, getUser);
     yield takeLatest(ADD_USER_START, addUser);
@@ -73,5 +85,5 @@ export default function* user() {
     yield takeLatest(DELETE_USER_START, deleteUser);
     yield takeLatest(LOGIN_USER_START, loginUser);
     yield takeLatest(LOGOUT_USER_START, logoutUser);
-
+    yield takeLatest(PROFILE_EDIT_START, editProfile);
 }

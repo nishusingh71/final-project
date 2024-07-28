@@ -9,12 +9,12 @@ import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCtT2X_MMS2afFJbG5yJB4qzcg6XjWxniU",
-  authDomain: "ogani-a7961.firebaseapp.com",
-  projectId: "ogani-a7961",
-  storageBucket: "ogani-a7961.appspot.com",
-  messagingSenderId: "670510244837",
-  appId: "1:670510244837:web:1848ed1a09c1e76ec6450c",
+  apiKey: "AIzaSyDeVgl-9FLc3cq2fPoelKHg6veADcWtWIE",
+  authDomain: "testdb-f0203.firebaseapp.com",
+  projectId: "testdb-f0203",
+  storageBucket: "testdb-f0203.appspot.com",
+  messagingSenderId: "611384455960",
+  appId: "1:611384455960:web:89929b66de558bb3e2246d"
 };
 
 // Initialize Firebase

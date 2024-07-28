@@ -6,7 +6,6 @@ import { initialState } from './loginValidation';
 import { useFormData } from '../../hooks/useFormData';
 import EmailInput from '../../components/ui/EmailInput';
 import PasswordInput from '../../components/ui/PasswordInput';
-import TextInput from '../../components/ui/TextInput';
 import { modifyFormData } from '../../helpers/formHelper';
 import { useDispatch, useSelector } from 'react-redux';
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -75,7 +74,7 @@ const Login = () => {
   useEffect(() => {
     setDefaultValue()
     dispatch(getUserStart())
-  }, [setDefaultValue])
+  }, [setDefaultValue,dispatch])
 
   return (
     <>
