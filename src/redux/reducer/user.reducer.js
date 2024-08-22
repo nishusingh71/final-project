@@ -52,11 +52,12 @@ export const userReducer = (state = initialState, action) => {
             };
 
         case LOGOUT_USER_SUCCESS:
-            console.log("testing");
             localStorage.setItem("currentUser", JSON.stringify(defaultValue))
             return {
                 ...state,
-                currentUser: {...defaultValue}
+                currentUser: {
+                    ...defaultValue
+                }
             };
 
         default:

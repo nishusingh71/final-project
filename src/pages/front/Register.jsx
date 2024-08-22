@@ -71,7 +71,7 @@ const Register = () => {
 
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb marginTop={"150px"}/>
 
       <div className='container mt-4'>
         <div className={`row ${Styles.mainContent} bg-success`}>

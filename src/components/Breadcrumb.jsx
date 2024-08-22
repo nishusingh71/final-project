@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const Breadcrumb = () => {
+const Breadcrumb = (props) => {
     let route = "/";
     let [segment, setSegment] = useState([""]);
     let location = useLocation();
@@ -11,7 +11,7 @@ const Breadcrumb = () => {
     }, [location.pathname])
 
     return (
-        <div className="container-fluid page-header py-5">
+        <div className="container-fluid page-header py-5" style={{marginTop : props.marginTop ?? "initial" }}>
             <h1 className="text-center text-white display-6 text-capitalize">
                 {segment.length === 4 ? `${segment[segment.length - 1]} ${segment[segment.length - 2]}` : segment[segment.length - 1]}
             </h1>

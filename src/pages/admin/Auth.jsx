@@ -36,11 +36,11 @@ const Auth = () => {
     if(!authenticatePath && currentUser.role === "Customer") {
       navigate("/admin/dashboard")
     }
-  }, [path.pathname])
+  }, [path.pathname, currentUser.role, currentUser.name, navigate])
 
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb marginTop={"150px"} />
 
       <div className='container mt-4'>
         <div className='row'>

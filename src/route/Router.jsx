@@ -21,6 +21,7 @@ import EditUser from '../pages/admin/user/EditUser'
 import Login from '../pages/front/Login'
 import Register from '../pages/front/Register'
 import NotFound from '../pages/front/NotFound'
+import Thank from '../pages/front/Thank'
 
 const Router = () => {
     return (
@@ -31,7 +32,7 @@ const Router = () => {
             <Route path='/' element={<Home />} />
 
             {/* product details page */}
-            <Route path='/product-details' element={<ProductDetails />} />
+            <Route path='/product-details/:slug' element={<ProductDetails />} />
 
             {/* cart page  */}
             <Route path='/cart' element={<Cart />} />
@@ -44,6 +45,9 @@ const Router = () => {
 
             {/* register page */}
             <Route path='/register' element={<Register />} />
+
+            {/* thank you page */}
+            <Route path='/thank-you' element={<Thank />} />
 
             {/* Admin Route */}
             <Route path='/admin' element={<Auth />}>
@@ -59,7 +63,7 @@ const Router = () => {
                     <Route path='' element={<Order />} />
 
                     {/* order view page */}
-                    <Route path='view' element={<OrderView />} />
+                    <Route path='view/:id' element={<OrderView />} />
                 </Route>
 
                 {/* product pages*/}
